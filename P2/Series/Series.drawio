@@ -1,0 +1,52 @@
+<mxfile host="65bd71144e">
+    <diagram id="1-xnrCZWPeYPjNbDc5zA" name="Page-1">
+        <mxGraphModel dx="570" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="18" value="" style="edgeStyle=none;html=1;strokeWidth=1;endArrow=diamondThin;endFill=0;endSize=20;" edge="1" parent="1" source="2" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Episodio" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="710" width="190" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="- titulo: string&#10;- descripcion: string&#10;- flag: bool&#10;- calificacion: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="190" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
+                    <mxGeometry y="90" width="190" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+ getTitulo(): string&#10;+ getDescripcion(): string&#10;+ getCalificacion(): string&#10;+ fueVisto(): bool&#10;+ setTitulo(t: string): void&#10;+ setDescripcion(d: tstring): void&#10;+ calificar(c: int): void&#10;+ ver(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="98" width="190" height="132" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=0;endSize=20;" edge="1" parent="1" source="6" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Temporada" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="533" width="190" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="+ episodios: List&lt;Episodio&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6">
+                    <mxGeometry y="26" width="190" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6">
+                    <mxGeometry y="52" width="190" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+ addEpisodio(e: Episodio): void&#10;+ cantEpisodios(): int&#10;+ episodiosVistos(): int&#10;+ calificacion(): double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6">
+                    <mxGeometry y="60" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Serie" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="530" width="220" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="- titulo: string&#10;- descripcion: string&#10;- creador: string&#10;- genero: string&#10;- temporadas: List&lt;Temporada&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+                    <mxGeometry y="26" width="220" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="10">
+                    <mxGeometry y="110" width="220" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="+ addTemporada(t: Temporada): void&#10;+ episodiosVistos(): int&#10;+ calificacion(): double&#10;+ serieCompletada(): bool&#10;+ getTitulo(): string&#10;+ getDescripcion(): string&#10;+ getCreador(): string&#10;+ getGenero(): string&#10;+ setTitulo(t: string): void&#10;+ setDescripcion(d: string): void&#10;+ setCreador(c: string): void&#10;+ setGenero(g: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+                    <mxGeometry y="118" width="220" height="182" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
