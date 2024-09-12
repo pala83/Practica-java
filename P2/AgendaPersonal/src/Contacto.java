@@ -35,6 +35,14 @@ public class Contacto {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        Contacto c = (Contacto)obj;
+        return c.getNombre().equals(this.nombre) &&
+        c.getTelefono().equals(this.telefono) &&
+        c.getMail().equals(this.mail);
+    }
+
+    @Override
     public String toString() {
         String retorno = this.nombre + "\t| " + this.telefono + "\t| " + this.mail + "\n";
         return retorno;

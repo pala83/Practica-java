@@ -15,7 +15,8 @@ public class Reunion {
     }
 
     public void addAsistente(Contacto nuevo){
-        this.asistentes.add(nuevo);
+        if(!this.asistentes.contains(nuevo))
+            this.asistentes.add(nuevo);
     }
 
     public String getLugar() {

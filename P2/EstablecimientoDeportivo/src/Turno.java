@@ -1,12 +1,14 @@
+import java.time.LocalTime;
+
 public class Turno {
     private Usuario usuario;
     private Cancha cancha;
     private Horario horario;
 
-    public Turno(Usuario usuario, Cancha cancha, Horario horario){
+    public Turno(Usuario usuario, Cancha cancha){
         this.usuario = usuario;
         this.cancha = cancha;
-        this.setHorario(horario);
+        this.horario = new Horario(LocalTime.now(), 60 );
     }
 
     public Usuario getUsuario() {
@@ -24,7 +26,7 @@ public class Turno {
     public void setCancha(Cancha cancha) {
         this.cancha = cancha;
     }
-    public boolean setHorario(Horario horario) {
+    public boolean setHorario(Horario horario) { // El horario debe tener por lo menos una hora
         if(horario.getDuracion()>=60)
             this.horario = horario;
         return horario.getDuracion() >= 60;
